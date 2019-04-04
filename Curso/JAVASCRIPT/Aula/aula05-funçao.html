@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <script>
+           function Somar(n1, n2){
+                return n1 + n2;
+           }
+
+           var soma = Somar(10, 20);
+           console.log("Resultado: ", soma);
+
+           Somar.teste = "Propriedade da funcao";
+
+           console.log(Somar.teste);
+
+           var teste = function(n){
+              n();
+           }
+
+           teste(function(){
+                console.log("Função passado por parâmetro");
+           });
+
+           console.log("_________________________________");
+
+           var x = 0;
+           var y;
+
+           function mostrarX(){
+                var x = 10; //escopo global
+                var y = 20;
+
+                console.log("Moxtra x dentro: ", x);
+                console.log("Moxtra y dentro: ", y);
+           }
+
+           mostrarX();
+
+                console.log("Moxtra x dentro: ", x);
+                console.log("Moxtra y dentro: ", y);
+        </script>
+
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+         
+        
+    </body>
+</html>

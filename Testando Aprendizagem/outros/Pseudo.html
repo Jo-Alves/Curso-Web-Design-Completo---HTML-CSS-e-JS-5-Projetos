@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Joelmir">
+        <meta name="description" content="Testando conhecimento">
+        <meta name="keyword" content="html5, css, Seletores">
+        <title>seletores CSS</title>
+        <style>
+            input{
+                display: block;
+                margin: 10px;
+            }
+            input::placeholder{
+                color: rgb(9, 179, 179);
+            }
+            input:read-only{
+                color: blue;
+            }
+           p:lang(pt-br){
+                quotes: '\201C' '\201D' '\2018' '\2019'
+            }
+            button{
+                width: 150px;
+                height: 50px;
+                color: white;
+                font-weight: bolder;
+                background-color: aqua;
+            }
+            button:active{
+                color: rgb(224, 11, 47);
+                background-color: yellowgreen;
+            }
+
+            input:default {
+                box-shadow: 0 0 2px 1px coral;
+            }
+
+            input:default + label {
+                color: coral;
+            }
+            input[type="email"]:invalid{
+                background-color: rgb(235, 100, 100);
+                color: white;
+            }
+            input[type="email"]:valid{
+                background-color: aqua;
+                color: black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <input type="text" placeholder="Digite o seu nome aqui">    
+        <input type="text" value="Nome" readonly>
+        <p>lang="pt-br"</p>
+        <button>Mudar cor botão</button>
+
+        <fieldset>
+                <legend>Favorite season</legend>
+              
+                <input type="radio" name="season" id="spring">
+                <label for="spring">Spring</label>
+              
+                <input type="radio" name="season" id="summer" checked>
+                <label for="summer">Summer</label>
+              
+                <input type="radio" name="season" id="fall">
+                <label for="fall">Fall</label>
+              
+                <input type="radio" name="season" id="winter">
+                <label for="winter">Winter</label>
+              </fieldset>
+
+              <input type="email">
+    </body>
+</html>

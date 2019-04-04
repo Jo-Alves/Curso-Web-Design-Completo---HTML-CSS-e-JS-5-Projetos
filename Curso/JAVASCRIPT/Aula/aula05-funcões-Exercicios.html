@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <script>
+            
+
+            // function CalcularMedia(Nota1, Nota2, Nota3, Nota4){
+            //     console.log("A média é: " + (Nota1 + Nota2 + Nota3 + Nota4) / 4);
+            // }
+            // CalcularMedia();
+            // var somar = CalcularMedia(100, 70.5, 80, 90);
+
+            (function()
+            {
+                function CalcularMedia()
+                {
+                var media;
+                soma = 0;
+                var contador = 0;
+
+                while(typeof arguments[contador] === 'number'){
+                    soma += arguments[contador];
+
+                    contador ++;
+                }
+
+                media = soma / (contador++);
+                console.log("A Média das notas é: ", media);
+                }
+            var somar = CalcularMedia(100, 70.5, 80, 90, 99);
+        })()
+        </script>
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+         
+        
+    </body>
+</html>

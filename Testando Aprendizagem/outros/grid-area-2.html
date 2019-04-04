@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .div-pai{            
+                width: 50%;
+                margin: 0 auto;
+                background-color: rgb(121, 121, 248);
+                color: white;   
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 100px);
+                grid-gap: 5px;
+                grid-template-areas: "Valdirene Valdirene Lidia"
+                                     "Joelmir   Joelmir   Lidia"
+                                     "Alexina   Nilza     Renata";
+                padding: 5px;
+            }
+
+            .div-filho{        
+                background-color: rgb(248, 121, 210);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid white;
+            }
+            .Valdirene{
+                grid-area: Valdirene;
+            }
+            .Joelmir{
+            grid-area: Joelmir;
+            }
+
+            .Lidia{
+               grid-area:  Lidia;
+            }
+
+            .Alexina{
+                grid-area: Alexina;
+            }
+            .Nilza{
+                grid-area: Nilza;
+            }
+            .Renata{
+                grid-area: Renata;
+            }
+          
+        </style>
+    </head>
+    <body>
+        <div class="div-pai">            
+            <div class="Valdirene div-filho">Valdirene</div>
+            <div class="Joelmir div-filho">Joelmir</div>
+            <div class="Lidia div-filho">Lídia</div>
+            <div class="Alexina div-filho">Alexina</div>
+            <div class="Nilza div-filho">Nilza</div>            
+            <div class="Renata div-filho">Renata</div>
+        </div>
+    </body>
+</html>

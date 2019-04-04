@@ -1,0 +1,28 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Linguagem de programação JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+            var Pessoa = [
+                {"Nome": "Joelmir", "Email": "joalves3carvalho@gmail.com"},
+                {"Nome": "Joelmir", "Email": "joelmirogerio@gmail.com"},
+                {"Nome": "Joelmir", "Email": "jojocarvalho_rogerio@hotmail.com"},
+                {"Nome": "Valdirene", "Email": "valdireneferreira0719@gmail.com"}
+            ]
+            var message = "";
+            for( var i = 0; i < Pessoa.length; i++){
+                message += "Nome: " + Pessoa[i].Nome + " Email: " + Pessoa[i].Email + "<br>";
+            }
+    
+            document.querySelector("#output").innerHTML = message;
+        </script>
+</body>
+</html>

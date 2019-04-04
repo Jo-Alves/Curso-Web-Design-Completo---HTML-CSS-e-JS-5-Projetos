@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linguagens de programação JAVASCRIPT</title>
+    <style>
+        #output{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+        <div id="output"></div>
+        <script>
+        var produto = new Object();
+               produto.descricao = "Caneta";
+               produto.preco = 1.00;
+               produto.estoque = 1;
+
+               var msg = '';
+                   msg += 'Produto: ' + produto.descricao + "<br>";
+                   msg += 'Preço: ' + produto.preco + "<br>";
+                   msg += 'Estoque: ' + produto.estoque + "<br>";
+                   document.querySelector("#output").innerHTML = msg;
+              
+        </script>
+</body>
+</html>

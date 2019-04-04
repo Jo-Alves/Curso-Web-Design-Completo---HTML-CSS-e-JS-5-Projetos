@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+    <style>
+        fieldset{
+            width: 300px;
+        }
+        input{
+            display: block;
+            width: 100%;
+        }
+        label:nth-of-type(2){
+            display: block;
+            margin-top: 10px;
+        }
+        span{
+            display: block;
+            margin: 10px 0;
+        }
+        input[type="submit"]{
+            margin-top: 10px;
+        }        
+    </style>
+</head>
+<body>
+    <h1>Prática JavaScript</h1>
+    <div class="container">
+        <fieldset>
+            <form action="#" autocomplete="off">
+               <label for="nome">Nome </label> <input type="text" id="nome" maxlength="15">
+               <label for="sobrenome">Sobrenome </label> <input type="text" id="sobrenome" maxlength="10">
+               <input type="submit" name="" value="Enviar">
+            </form>
+        </fieldset>        
+    </div>
+        <span class="span1"></span>
+        <span class="span2"></span>
+
+    <script>
+        var $nome = document.getElementById("nome");
+        var $sobrenome = document.getElementById("sobrenome");
+        var $form = document.querySelector('form');
+        var $span1 = document.querySelectorAll("span")[0];
+        var $span2 = document.querySelectorAll("span")[1];
+
+        $form.addEventListener("submit", function(e){
+            // debugger
+            if($.value === "" || $sobrenome.value === ""){
+                alert("Preencha todos os caracteres!");
+                 e.preventDefault();
+            }
+        })
+       
+        $nome.addEventListener("input", ContarLetrasNomeRestantes)
+        $sobrenome.addEventListener("input", ContarLetrasSnomeRestantes)
+        var maximoNome = $nome.value.length, maximoSobrenome = $sobrenome.value.length;
+      
+        function ContarLetrasNomeRestantes(){
+           
+            var letrasNomeDigistadas = $nome.value.length;
+            var contLetrasNomeRestante = parseInt($nome.maxLength) - parseInt(letrasNomeDigistadas);
+            if(contLetrasNomeRestante <= 5){
+                $span1.textContent = 'Falta ' + contLetrasNomeRestante + " caracteres do nome ";
+            }
+           
+        }
+
+        function ContarLetrasSnomeRestantes(){
+           debugger
+            var LetrasSnomeDigitadas = this.value.length;
+            var contSnomeRestante = parseInt($sobrenome.maxLength) - parseInt(LetrasSnomeDigitadas);
+
+            if(contSnomeRestante <= 5){
+                $span2.textContent = 'Falta ' + contSnomeRestante + " caracteres do sobrenome ";
+            }
+             
+        }
+
+       
+    </script>
+</body>
+</html>

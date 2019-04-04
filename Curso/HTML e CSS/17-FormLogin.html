@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Jô Alves">
+        <meta name="description" content="Apredendo a trabalhar com formulários">
+        <meta name="keyword" content="html5, css, formulári0s">
+        <title>Formulário de login</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .formLogin{
+                width: 250px;
+                height: 200px;
+                margin: 50px auto 0;
+                font-family: sans-serif;
+            }  
+            #user, #pass, .btn{
+                display: block;
+                width: 100%;
+                padding: 10px;
+                font-size: 18px;
+                border: none;
+            }  
+            .formLogin fieldset{
+                background-color: #ccc;
+            }   
+            #user:focus, #pass:focus{
+                background-color: #ddd;
+            }
+            .formLogin label{
+                margin-top: 5px;
+                display: block;
+                margin-bottom: 15px;
+            }
+            .btn{
+                margin-top: 12px;
+            }
+            #user{
+                margin-bottom: 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Exemplo de formulário</h1>
+        <form action="#" method="POST" class="formLogin">
+            <fieldset>
+                <legend>Área de login </legend>
+                    <label for="user">Digite o seu usuário </label><input type="text" id="user" name="user" autofocus autocomplete="off">
+                    <label for="pass">Digite a sua senha </label><input type="password" id="pass" name="pass">
+                    <input type="submit" value="Logar" class="btn" autocomplete="on">               
+            </fieldset>
+        </form>
+    </body>
+</html>

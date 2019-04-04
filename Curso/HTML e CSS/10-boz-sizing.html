@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta  name="author" content="Joelmir">
+        <meta name="description" content="Usando Box-Sizing">
+        <meta name="keyword" content="html5, tecnologia">
+        <title>Box Sizing</title>
+        <style>
+           *{
+                padding: 0;
+            }
+            div{
+                width: 150px;
+                height: 100px;
+                margin-bottom: 10px;
+                box-shadow: 2px 2px rgba(0, 0, 0, .3);
+                background-color: orangered;
+            }
+         
+            #div1{
+                padding: 10px;
+            }
+            #div2{
+                padding: 10px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1"><p>Minha div 1</p></div>
+        <div id="div2"><p>Minha div 2</p></div>
+    </body>
+</html>

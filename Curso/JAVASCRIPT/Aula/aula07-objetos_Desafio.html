@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>
+        
+
+
+        <script>
+            
+           var Pessoa1 = {
+                nome: "Joelmir Rogério",
+                sobrenome:   "Carvalho"
+           };
+            var Pessoa2 = {
+                nome: "Valdirene Aparecida",
+                sobrenome:   "Ferreira"
+            };
+            
+
+            var Pessoa3 = {
+                nome: "Maria Lídia",
+                sobrenome:   "Ferreira Carvalho"
+            };
+            
+            var Pessoas = [
+                Pessoa1,
+                Pessoa2,
+                Pessoa3
+            ]
+
+           var x = 0;
+           while(Pessoas[x]){
+               console.log(Pessoas[x].nome + " " + Pessoas[x].sobrenome);
+               x++;
+           }            
+
+            console.log("==================================")
+
+            var _Pessoas = [
+                {
+                    Nome: "Joelmir Rogério ",
+                    Sobrenome: "Carvalho"
+                }, 
+                {
+                    Nome: "Valdirene Aparecida ",
+                    Sobrenome: "Ferreira"
+                }, 
+                {
+                    Nome: "Maria Lídia ",
+                    Sobrenome: "Ferreira Carvalho"
+                }
+            ]
+
+            for(var i = 0; i < _Pessoas.length; i++){
+                console.log(_Pessoas[i].Nome + _Pessoas[i].Sobrenome);
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Joelmir">
+        <meta name="description" content="Testando conhecimento">
+        <meta name="keyword" content="html5, css, Seletores">
+        <title>seletores CSS</title>       
+         <link rel="stylesheet" href="29-Transform.css">  
+    </head>
+        <style>
+            .div-pai1{
+            box-sizing: border-box; 
+            font-weight: bolder;
+            margin:10% auto;
+            width: 50%;    
+            height: 300px;
+            }
+            div::first-letter{
+                font-size: 30pt;
+            }
+
+            .div1{        
+                display: inline-block;
+                line-height: 85px;
+                font-family: tangerine;
+                font-size: 20pt;
+                text-align: center;
+                color: white;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                box-shadow: 4px 4px rgba(0, 0, 0, .8);
+                transform: scale(1.5);
+                transition: transform 1s linear 1s;
+            }
+
+            .div1:hover{
+                transform: scale(3);
+            }
+            
+
+        </style>     
+    </head>
+    <body>
+            <div class="div-pai1">
+                    <div class="div1">Joelmir</div>
+            </div>
+    </body>
+</html>

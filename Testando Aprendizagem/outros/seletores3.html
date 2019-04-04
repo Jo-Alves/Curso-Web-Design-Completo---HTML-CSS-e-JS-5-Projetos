@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Joelmir">
+        <meta name="description" content="Aprendendo seletores">
+        <meta name="keyword" content="html5, css, seletores">
+        <title>Seletores de atributos</title>
+        <style>
+            article:nth-child(1) > h3   {
+                background-color: brown;
+                color: yellow;
+            }
+
+            article:nth-child(3) p ~ p{
+                background-color: aqua;
+                color: white;
+                font-weight: bold;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            article:nth-child(5) h3 ~ p{
+                background-color: aqua;
+                color: white;
+                font-weight: bold;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            article:nth-child(7) h3 + p{
+                text-shadow: 5px 5px 2px black;
+            }
+
+            article:nth-child(9) p + p{
+                text-shadow: 5px 5px 2px brown;
+            }
+
+            article:nth-child(11) p + p{
+                text-shadow: 5px 5px 2px brown;
+            }
+
+        </style>
+    </head>
+    <body>
+        <article>
+            <h3>Título</h3>
+            <p>Paragrafo1</p>
+
+            <p>Paragrafo 2</p>
+
+            <p>Paragrafo 3</p>
+        </article>
+        <hr><article>
+                <h3>Título</h3>
+                <p>Paragrafo1</p>
+    
+                <p>Paragrafo 2</p>
+    
+                <p>Paragrafo 3</p>
+            </article>
+            <hr>
+
+            <article>
+                    <h3>Título</h3>
+                    <p>Paragrafo1</p>
+        
+                    <p>Paragrafo 2</p>
+        
+                    <p>Paragrafo 3</p>
+                </article>
+                <hr>
+
+                <article>
+                        <h3>Título</h3>
+                        <p>Paragrafo1</p>
+            
+                        <p>Paragrafo 2</p>
+            
+                        <em>Paragrafo 3</em>
+                    </article>
+                    <hr>
+
+                    <article>
+                            <h3>Título</h3>
+                            <p>Paragrafo1</p>
+                
+                            <p>Paragrafo 2</p>
+                
+                            <p>Paragrafo 3</p>
+                        </article>
+    </body>
+</html>

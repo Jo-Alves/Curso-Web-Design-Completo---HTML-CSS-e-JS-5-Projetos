@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabela de avaliação de prova</title>
+    <style>
+        body{
+            position: absolute;
+            top: 30px;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            color: black;
+        }
+        strong{
+            color: blue;
+        }
+        table{
+            width: 90%;
+        }
+        th{
+            text-transform: uppercase
+        }
+        table, td, th{
+            border: 1px solid;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td, th{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Disciplinas</th>           
+                <th>N. 1º bim.</th>
+                <th>N. 2º bim.</th>
+                <th>N. 3º bim.</th>
+                <th>N. 4º bim.</th>
+                <th>total nota</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="disciplina">
+                <td class="materia">Protuguês</td>
+                <td class="nota-1 nota">15.00</td>
+                <td class="nota-2 nota">16.00</td>
+                <td class="nota-3 nota">15.00</td>
+                <td class="nota-4 nota">13.00</td>
+                <td class="total nota"></td>
+                <td class="situacao"></td>
+            </tr>
+
+            <tr class="disciplina">
+                <td class="materia">Matemática</td>
+                <td class="nota-1 nota">20.00</td>
+                <td class="nota-2 nota">19.00</td>
+                <td class="nota-3 nota">18.00</td>
+                <td class="nota-4 nota">17.00</td>
+                <td class="total nota"></td>
+                <td class="situacao"></td>
+            </tr>
+
+            <tr class="disciplina">
+                <td class="materia">História</td>
+                <td class="nota-1 nota">15.00</td>
+                <td class="nota-2 nota">16.00</td>
+                <td class="nota-3 nota">18.00</td>
+                <td class="nota-4 nota">17.00</td>
+                <td class="total nota"></td>
+                <td class="situacao"></td>
+            </tr>
+
+            <tr class="disciplina">
+                <td class="materia">Geografia</td>
+                <td class="nota-1 nota">23.00</td>
+                <td class="nota-2 nota">23.00</td>
+                <td class="nota-3 nota">23.00</td>
+                <td class="nota-4 nota">20.00</td>
+                <td class="total nota"></td>
+                <td class="situacao"></td>
+            </tr>
+
+
+            <tr class="disciplina">
+                <td class="materia">Física</td>
+                <td class="nota-1 nota">23.00</td>
+                <td class="nota-2 nota">23.00</td>
+                <td class="nota-3 nota">23.00</td>
+                <td class="nota-4 nota">21.50</td>
+                <td class="total nota"></td>
+                <td class="situacao"></td>
+            </tr>
+
+            <tr class="disciplina">
+                <td class="materia">Bilogia</td>
+                <td class="nota-1 nota">18.00</td>
+                <td class="nota-2 nota">17.00</td>
+                <td class="nota-3 nota">15.00</td>
+                <td class="nota-4 nota">19.00</td>
+                <td class="total nota"></td>
+                <td class="situacao"></td>
+            </tr>
+
+            <tr class="disciplina">
+                <td class="materia">Química</td>
+                <td class="nota-1 nota">16.00</td>
+                <td class="nota-2 nota">17.00</td>
+                <td class="nota-3 nota">17.00</td>
+                <td class="nota-4 nota">17.00</td>
+                <td class="total nota"></td>
+                <td class="situacao"></td>
+            </tr>
+
+            <tr class="disciplina">
+                <td class="materia">Inglês</td>
+                <td class="nota-1 nota">15.00</td>
+                <td class="nota-2 nota">16.00</td>
+                <td class="nota-3 nota">18.00</td>
+                <td class="nota-4 nota">0.00</td>
+                <td class="total nota"></td>
+                <td class="situacao"></td>
+            </tr>
+
+            <tr class="disciplina">
+                <td class="materia">E. Física</td>
+                <td class="nota-1 nota">25.00</td>
+                <td class="nota-2 nota">25.00</td>
+                <td class="nota-3 nota">25.00</td>
+                <td class="nota-4 nota">25.00</td>
+                <td class="total nota"></td>
+                <td class="situacao"></td>
+            </tr>
+
+        </tbody>
+
+        <script>    
+                (function() {
+                    'use strict'
+                   var trs = document.querySelectorAll("table tbody .disciplina");
+
+                   var i = 0;
+                   while(trs[i]){
+                       var linhaNotas = trs[i];
+                       var linhasSituacao = trs[i];
+                       var tds = linhaNotas.querySelectorAll('.nota');
+                       var notas = RecuperarNumerosDeCelulas(tds);
+                       var soma = SomarNotas.apply(this, notas);
+                      
+                       linhaNotas.querySelector(".total").innerHTML = "<strong>" + soma + "<strong>";
+
+                       if(soma >= 60){
+                            linhaNotas.querySelector(".situacao").innerHTML = "<p style='color: green;'>Aprovado<p>" 
+                        }
+                        else 
+                            linhaNotas.querySelector(".situacao").innerHTML = "<p style='color: red;'>Reprovado<p>" 
+                       i++
+                   }
+
+                   function RecuperarNumerosDeCelulas(tds){
+                    debugger  
+                    var i = 0;
+                       var arr=[];
+                       while(tds[i]){
+                           if(!isNaN(tds[i].textContent) && tds[i].textContent != ""){
+                               arr.push(parseFloat(tds[i].textContent));
+                           }
+                           
+                           i++;
+                       }
+                       return arr;
+                   }
+
+                   function SomarNotas(){
+                       var notasBimestrais = 0;
+                       var i = 0;
+                        
+                       while(typeof arguments[i] === 'number'){
+                            notasBimestrais += arguments[i];
+                           i++;
+                       }
+                       return notasBimestrais;
+                   }
+                })()
+        </script>
+    </table>
+</body>
+</html>

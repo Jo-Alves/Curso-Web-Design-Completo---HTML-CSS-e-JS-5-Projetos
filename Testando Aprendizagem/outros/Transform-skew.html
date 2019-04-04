@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Joelmir">
+        <meta name="description" content="Testando conhecimento">
+        <meta name="keyword" content="html5, css, Seletores">
+        <title>seletores CSS</title>       
+         <link rel="stylesheet" href="29-Transform.css">  
+    </head>
+        <style>
+            .div-pai1{
+            box-sizing: border-box; 
+            font-weight: bolder;
+            margin:0 auto;
+            width: 50%;    
+            height: 300px;
+            }
+            div::first-letter{
+                font-size: 30pt;
+            }
+
+            .div1{        
+                display: inline-block;
+                line-height: 85px;
+                font-family: tangerine;
+                font-size: 20pt;
+                text-align: center;
+                color: white;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                box-shadow: 4px 4px rgba(0, 0, 0, .8);
+                transform: skewy(-50deg) translate(0, 70px);
+                margin-left: 20px;
+                transition: transform 1s;
+            }
+
+            .div1:hover{
+                transform: skewy(50deg) translate(0, 70px);
+            }
+
+            .div2{    
+                line-height: 85px;
+                font-family: tangerine;
+                font-size: 20pt;
+                text-align: center;
+                color: white;
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                box-shadow: 4px 4px rgba(214, 89, 89, 0.8);
+                transform: skewx(-50deg) translate(100%,-60%);
+                margin-left: 150px;
+                transition: transform 1s;
+            }
+
+            .div2:hover{
+                transform: skewx(50deg) translate(100%,-60%);
+            }
+
+        </style>     
+    </head>
+    <body>
+            <div class="div-pai1">
+                    <div class="div1">Joelmir</div>
+                    <div class="div2">Joelmir</div>
+            </div>
+    </body>
+</html>

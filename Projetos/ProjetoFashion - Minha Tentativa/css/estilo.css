@@ -1,0 +1,141 @@
+@charset "utf-8";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, Arial, sans-serif;
+    letter-spacing: 1px;  
+    color: rgb(82, 79, 79);  
+}
+
+.principal{
+    width: 1024px;
+    margin: 20px auto;        
+}
+
+/* ==================== Navegação do site ==================== */
+.menu{
+    background-color:#162028;
+    padding: 15px 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.nav-menu ul{
+    list-style: none;   
+    text-align: right; 
+
+}
+.nav-menu ul li{    
+    display: inline-block;
+    margin-right: 35px;
+}
+.nav-menu a{
+    color: rgba(145, 168, 160, .6);
+    text-decoration: none;
+    font-size: 9pt;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    transition:  color .5s linear;
+    -webkit-transition:  color .5s linear;
+    -moz-transition:  color .5s linear;
+    -ms-transition:  color .5s linear;
+    -o-transition:  color .5s linear;
+}
+.nav-menu a:hover{
+    color: white;
+}
+.modelo{
+    display: block;
+    width: 100%;
+}
+.logo{    
+    top: 25px;
+    margin-left: 100px;
+    position: absolute;
+    margin-top: auto;
+}
+/* ==================== Conteúdo do site ==================== */
+.portifolio{
+    text-align: center;
+    width: 920px;
+    line-height: 2;
+    margin: 50px auto;
+}
+.portifolio h1{
+    font-size: 2.5em;
+    color: black;
+}
+.conteudo-principal{
+    width: 75%;
+    margin: auto;
+    border: 1px solidd black;
+    text-align: center;
+}
+
+/* ========= Galeria ========== */
+
+.section-gallery{
+    margin: 50px 0 50px 100px;
+    overflow: auto;
+}
+.section-gallery .gallery{
+    letter-spacing: 100px;
+    width: 254px;
+    height: 250px;
+    margin-right: 40px;
+    float: left; 
+}
+
+
+/* ========= Sobre ========== */
+.sobre{
+    background: url(../imagens/bg_detalhe.png) no-repeat;
+    background-size: 100%;
+    background-position: right bottom;
+    min-height: 600px;
+    color: white;    
+    position: relative;
+    text-align: center;   
+}
+
+.sobre .titulo{       
+    color: white;
+    position: absolute;
+    font-size: 30pt;
+    text-align: left;
+    margin-top: 150px;
+    left: 0px;
+    text-transform: uppercase; 
+}
+.sobre p{
+    color: white;
+    position: absolute;
+    margin-top: 250px;
+    text-align: left;
+    margin-left: 100px;
+    margin-right: 360px;
+}
+/* ========== Contato ========== */
+.contato{
+    text-align: center;
+    margin: 50px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+.contato p{    
+    color: rgb(37, 37, 59);
+}    
+
+ /* ========== Rodapé =========== */
+.rodape{
+    text-align: center;
+    background-color:#162028;
+    margin-top: -10px;
+    padding: 25px 0;
+    color: rgba(145, 168, 160, .6);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    letter-spacing: 5px;
+}

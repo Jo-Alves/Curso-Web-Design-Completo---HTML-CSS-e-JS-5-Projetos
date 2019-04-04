@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linguagens de programação JAVASCRIPT</title>
+    <style>
+        #output{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+        <div id="output"></div>
+        <script>
+             var software = new Object();
+
+            software.Descricao = 'Academy Tour';
+            software.Criador = 'Las Tecnology';
+            software.Desenvolvedor = 'Joelmir R. Carvalho';
+            software.Idealizador = 'Cláudio Góes';
+
+            document.querySelector("#output").innerHTML = "Nome do novo projeto: " + software.Descricao + '.<br> Empresa envolvida no projeto: ' + software.Criador + ".<br> Nome do responsável pela criação: " + software.Desenvolvedor + ".<br> Nome do idealizador: " + software.Idealizador;
+              
+        </script>
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <script>
+           (function(){
+            var IMC;
+            var peso = prompt("Digite o seu peso");
+            peso = parseFloat(peso);
+            var altura = prompt("Digite a sua altura");
+            altura = parseFloat(altura);
+
+            function CalcularMassaCorporal(massa, Alt){
+                 
+                return  massa / (Alt * Alt);
+            }
+
+            IMC = CalcularMassaCorporal(peso, altura);            
+            alert("O seu índice de massa corporal é: " + IMC);
+            if(IMC < 17){
+                alert('Muito abaixo do peso');
+            }
+            else if(IMC < 18.5){
+                alert('Abaixo do peso');
+            }
+            else if(IMC < 25){
+                alert('Peso normal');
+            }
+            else if(IMC < 30){
+                alert('Acima do peso');
+            }
+            else if(IMC < 35){
+                alert('Obesidade Grau I');
+            }
+            else if(IMC <= 40){
+                alert('Obesidade Grau II');
+            }
+            else if(IMC > 40){
+                alert('Obesidade Grau III');
+            }
+           })()
+        </script>
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+         
+        
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Joelmir">
+        <meta name="description" content="Testando conhecimento">
+        <meta name="keyword" content="html5, css, Seletores">
+        <title>seletores CSS</title>
+        <style>
+         body{
+             font-family: sans-serif;
+             text-align: left;
+         }
+
+         a{
+             text-decoration: none;
+                color: rgb(97, 97, 236);
+         }      
+
+         pre{
+             background-color: rgb(237, 237, 245);
+             border-left: 4px solid rgb(92, 92, 247);
+         }
+
+         .obs{
+             background-color: rgb(247, 225, 225);
+             border-left: 4px solid rgb(238, 168, 39);
+             padding: 20px 10px;
+             line-height: 1.5;
+             box-sizing: border-box;
+         }
+         
+         hr{
+             border-width: 2px;
+             border-color: rgba(87, 87, 206,.8);             
+             margin: 60px 0;
+         }
+
+         p{
+             letter-spacing: 1px;
+         }
+
+         .span1{
+             color: green;
+         }
+         .span2{
+            color: rgb(67, 8, 126);
+         }
+        </style>
+    </head>
+    <body>
+        <div class="conceito"></div>
+            <H1>Trabalhando com PseudoClasse e PseudoElementos</H1>
+            <p>Uma <strong>pseudo-classe</strong> CSS é uma palavra-chave adicionada a seletores que especifica um estado especial do elemento selecionado. Por exemplo, <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/:hover">:hover</a> pode ser usado para alterar a cor de um botão quando o usuário passar o cursor sobre ele.</p>
+     <pre><code>
+  <span class="span1">div:hover</span> {
+     <span class="span2">background-color:</span>#F89B4D;
+  }</code>
+            </pre>
+            <p>Pseudo-classes permitem que você aplique um estilo a um elemento não apenas em relação ao conteúdo da árvore do documento, mas também em relação a fatores externos como o histórico de navegação (<a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/:visited">:visited</a>, por exemplo), o estado do seu conteúdo (como <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/:checked">:checked</a> em certos elementos de um formulário), ou a posição do mouse (como <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/:hover">:hover</a>, que permite saber se o mouse está sobre um elemento ou não).</p>
+
+            <div class="obs">
+                <strong>Observação:</strong> Diferentemente das <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/pseudo-elementos">pseudo-classes</a>, pseudo-elementos podem ser usados para estilizar uma parte específica de um elemento.
+            </div>
+            <hr>
+
+            <h2>Índice de pseudo-classes padrão</h2>
+            <table>
+                <thead>
+                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>:active</td>
+                        <td>:in-range</td>
+                        <td>:optional</td>
+                    </tr>
+                    <tr>
+                        <td>:checked</td>
+                        <td>:invali</td>
+                        <td>:out-of-range</td>
+                    </tr>
+                    <tr>
+                        <td>:defaut</td>
+                        <td>:lang</td>
+                        <td>:read-only</td>
+                    </tr>
+                    <tr>
+                        <td>:dir()</td> 
+                        <td>:last-child</td>
+                        <td>:read-write</td>
+                    </tr>
+                    <tr>
+                        <td>:disabled</td> 
+                        <td>:last-of-type</td>
+                        <td>:required</td>
+                    </tr>
+                    <tr>
+                        <td>:empty</td> 
+                        <td>:left</td>
+                        <td>:right</td>
+                    </tr>                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                       <td>:focus</td> 
+                       <td>:nth-of-type</td>      
+                    </tr>
+                    <tr>
+                       <td>:hover</td> 
+                       <td>:only-child</td>
+                    </tr>
+                    <tr>
+                       <td>:indeterminate</td> 
+                       <td>:only-of-type</td>
+                    </tr>        
+                </tfoot>
+            </table>
+        </div>
+    </body>
+</html>

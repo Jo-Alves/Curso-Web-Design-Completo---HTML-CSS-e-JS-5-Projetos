@@ -1,0 +1,247 @@
+﻿@charset "utf-8";
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+    font-family: 'arial', sans-serif;
+    color: rgb(61, 58, 58); 
+    text-align: justify;         
+}
+body{
+    background-color: #ccc;      
+}
+
+/* Parte da navegação */
+
+#logo{
+    background: url(../imagens/Logo.png) no-repeat;
+    width: 169px;
+    height: 49px;    
+    position: absolute;
+    top: 0;
+    margin: 20px auto;
+    margin-left: 40px;
+}
+
+#menu{
+    background-color: rgb(194, 151, 235);
+    padding: 25px; 
+    width: 1100px;
+    margin: 0px auto;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, .5);
+}
+#nav-menu{
+    width: 100%;
+}
+#nav-menu ul{
+    text-align: right;
+    text-transform: uppercase;
+}
+#nav-menu ul li{
+    border: 1px solid rgb(227, 215, 238);
+    border-radius: 10px;
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+}
+#nav-menu li:hover{
+    background-color: aquamarine;
+ 
+}
+#nav-menu a{
+    text-decoration: none;
+    color: rgb(236, 229, 243);  
+    display: block;
+    padding: 10px;
+}
+#nav-menu a:hover{
+    color: black;
+}
+
+/* Conteúdo principal da págna */
+
+#conteudo-principal{
+    width:1100px;
+    margin:0 auto;
+    border: .1px solid transparent;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, .5);   
+    background-color: white; 
+}
+h1{
+    text-align: center;
+    color: black;
+    text-transform: uppercase;    
+    font-size: 20pt;
+}
+.conteudo{
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+#conteudo-01 h1{
+    margin-top: 30px;
+}
+#conteudo-01 h2{
+    text-align: center;
+    color:black;
+    font-size:10pt;
+    margin-bottom: 30px;
+}
+#conteudo-01 img{
+    display: block;
+}
+.conteudo q{
+    display: block;
+    text-align: center;
+    font-size: 10pt;
+}
+.div-banner{
+    width: 1000px;
+    border: 1px solid rgba(0, 0, 0, .9);    
+    margin: 0 auto;
+}
+#conteudo-02{
+    margin-top: 30px;     
+}
+#conteudo-02 h1{
+    margin-bottom: 30px; 
+}
+.div-text{
+    width: 80%;
+    margin: 0 auto;
+}
+.div-text p{
+    text-align: justify;
+}
+#sec-leia-mais{
+    margin: 40px 0px 50px 60px;    
+    overflow: hidden;
+}
+.leia-mais{   
+    width: 300px;
+    height: 390px;
+    border: 1px solid black; 
+    font-size: 10pt;
+    float: left;
+    margin-right: 40px;
+
+}
+.leia-mais p{
+    text-align: center;
+    padding: 5px
+}
+img{
+    width: 100%;
+}
+#p-leia-me{
+    margin-bottom: 10px;
+    color: blue;
+}
+/* Referências */
+#referencia{   
+    border: 1px dotted black; 
+    width: 1000px;
+    margin: 30px auto 15px;
+    padding: 10px 30px;
+}
+#referencia h1{
+    margin-bottom: 20px;    
+}
+#referencia strong{
+    color: black;
+}
+/* rodapé da página */
+#rodape{   
+    width: 1100px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: rgb(194, 151, 235);
+    border-right: 1px solid transparent;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, .5);
+}
+#rodape p{
+    color: rgb(133, 100, 167);  
+    font-weight: bold;
+    text-align: center;    
+}
+#rodape span{
+    font-family: 'tangerine';
+    font-weight: normal;
+    font-size: 30pt;
+    color:white;
+}
+#rede-sociais{
+    height: 50px;
+    margin: 5px auto;
+    text-align: center;
+}
+.logo-rede-sociais{
+    width: 48px;
+    height: 48px;        
+}
+#logo-facebook{
+    background: url(../imagens/social-facebook-box-blue-icon.png) no-repeat;
+    display:inline-block;
+    margin: 0 3px 0 auto;
+}
+#logo-twistter{
+    background: url(../imagens/twitter-icon.png) no-repeat;
+    display: inline-block;
+}
+#logo-instagram{
+    background: url(../imagens/Instagram-icon.png) no-repeat;
+    display: inline-block;
+}
+
+/* configuração da página amor pelos animais */
+.conteudo span{
+    font-size: 10pt;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+#veja{
+    display: inline-block;
+    margin: 30px 0;
+    color: blue;
+}
+#conteudo-principal #sec-fale-conosco img{
+    width: 400px;
+    height: 450px;
+    float: left;
+    border-right: 1px solid black;
+}
+
+aside{
+    margin-right: 30%;
+    display: block;
+    float: right;    
+}
+legend{
+    text-align: center;
+}
+fieldset{
+    padding: 10px;
+    margin: 113px auto;    
+    width: 80%;
+    text-align: center;
+}
+fieldset p{
+    display: block;
+    margin-left: 300px;
+    line-height: 1.5;
+}
+fieldset span{
+    text-transform: uppercase;
+    font-weight: bold;    
+    color: black;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Joelmir">
+        <meta name="description" content="Aprendendo seletores">
+        <meta name="keyword" content="html5, css, seletores">
+        <title>Content, after e before</title>
+        <style>
+            div{
+                border: 2px solid red;
+                padding: 25px;
+                box-sizing: border-box;
+                position: relative;
+            }
+            div::before{
+                content: "Before: ";
+            }
+            div::after{
+                content: "Jô Alves";
+                font-family: tangerine, sans-serif;
+                font-size: 23pt;
+                display: inline-block;
+                box-sizing: border-box;
+                color: white;
+                font-weight: bold;
+                width: 300px;
+                height: 50%;
+                background:linear-gradient(to right top, yellow, red, blue);
+                position: absolute;
+                bottom: auto;
+                text-align: center;
+                right: 10px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div>Minha DIV</div>
+    </body>
+</html>

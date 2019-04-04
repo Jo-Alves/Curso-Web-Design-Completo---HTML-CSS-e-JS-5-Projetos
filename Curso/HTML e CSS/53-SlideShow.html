@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+    <head>
+        <title>Estrutura básica de um html</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Joelmir">
+        <meta name="description" content="Estrutura básica">
+        <meta name="keyword" content="html5, tecnologia">
+
+        <style>
+
+            @keyframes slideShow{
+              0%{
+                    transform: translateY(0);
+                }
+                22%{
+                    transform: translateY(0);
+                }
+                25%{
+                    transform: translateY(-80vh);
+                }
+                47%{
+                    transform: translateY(-80vh);
+                }                
+                50%{
+                    transform: translateY(-160vh);
+                }
+                72%{
+                    transform: translateY(-160vh);
+                }
+                75%{
+                    transform: translateY(-240vh);
+                }
+                97%{
+                    transform: translateY(-240vh);
+                }
+                100%{
+                    transform: translateY(-240vh);
+                }
+            }
+
+          body{
+              font-family: sans-serif;
+              color: white;
+              background-color: #1a1818;
+              margin:0;
+              text-align: center;
+          }
+
+          .slide-externa{
+            width: 80vw;
+            height: 80vh;
+            border: 10px solid white;
+            box-shadow: 0 0 10px black;
+            margin-left: 10vw;
+            overflow: hidden;
+            box-sizing: border-box;
+          }
+
+          .slide-interna{
+              width: 100%;   
+              animation: slideShow 10s infinite cubic-bezier(.5, -0.73, .59, 1.77) alternate both;
+          }
+
+          .slide-interna img{
+              display: block;
+              max-height: 80vh;
+              width: 100%;
+              object-fit:cover;
+              
+          }
+        </style>
+    </head>
+    <body>
+        <h1>Animation - SlideShow</h1>
+        <div class="slide-externa">
+            <div class="slide-interna">
+                <img src="slide1.jpg" alt="dog-1">
+                <img src="slide2.jpg" alt="dog-2">
+                <img src="slide3.jpg" alt="dog-3">
+                <img src="slide4.jpg" alt="dog-4">
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .div-pai{            
+
+                width: 60%;          
+                margin: 10px auto;
+                padding: 5px;
+                background-color: rgba(102, 102, 202, 0.486); 
+                display: grid;
+                grid-gap: 5px;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                grid-auto-rows: 50px;
+
+                grid-template-areas: "Valdirene Valdirene Valdirene"
+                                     "Joelmir   Joelmir   Noelly"
+                                     "Lidia     Lidia     Noelly"
+                                     "Benedito Benedito Gislaine"
+                                     "Alexina   Alexina   Gislaine"
+                                     "Tais      Tais      Renato"
+                                     "Bety      Bety      Renato"
+                                     "Girlene   Girlene   Nilza";                
+            }
+
+            .div-filho{        
+                background-color: white; 
+                border: 1px solid red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: rgb(23, 194, 194);
+            }      
+
+            .Valdirene{
+                grid-area: Valdirene;
+            }    
+            
+            .Joelmir{
+                grid-area: Joelmir
+            }
+
+            .Lidia{
+                grid-area: Lidia;
+            }
+            
+            .Noelly{
+                grid-area: Noelly;
+            }
+
+            .Beneditto{
+                grid-area: Benedito;
+            }
+
+            .Alexina{
+                grid-area: Alexina;
+            }
+
+            .Girlene{
+                grid-area: Girlene;
+            }
+
+            .Gislaine{
+                grid-area: Gislaine;
+            }
+
+            .Nilza{
+                grid-area: Nilza;
+            }
+
+            .Bety{
+                grid-area: Bety;                
+            }
+
+            .Tais{
+                grid-area: Tais;
+            }
+
+            .Renato{
+                grid-area: Renato;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="div-pai">            
+            <div class="div-filho Valdirene">Valdirene</div>
+            <div class="div-filho Joelmir">Joelmir</div>
+            <div class="div-filho Lidia">Lídia</div>            
+            <div class="div-filho Noelly">Noelly</div>
+            <div class="div-filho Beneditto">Beneditto</div>
+            <div class="div-filho Alexina">Alexina</div>
+            <div class="div-filho Nilza">Nilza</div>            
+            <div class="div-filho Girlene">Girlene</div>
+            <div class="div-filho Gislaine">Gislaine</div>
+            <div class="div-filho Bety">Bety</div>
+            <div class="div-filho Tais">Taís</div>
+            <div class="div-filho Renato">Renato</div>
+        </div>
+    </body>
+</html>

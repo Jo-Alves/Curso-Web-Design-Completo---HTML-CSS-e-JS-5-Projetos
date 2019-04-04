@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px; 
+    font-family:   'Arial Narrow';
+    color: #555;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+h1, h2, h3, h4, h4, h5, h6{
+    font-weight: normal;
+}
+
+.corpo{
+    width: 100%;
+}
+
+.div-header{
+    background: linear-gradient(to bottom, rgba(54, 175, 105,.8),  rgba(118, 126, 193, .8)), url(../imagens/depositphotos_95223816-stock-photo-man-rowing-in-canoe.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    height: 650px;
+    text-align: center;
+    border-top: 1px solid transparent;
+}
+
+.header-logo{
+    margin: 20px;
+}
+.div-header-model{
+    margin-top: 150px;
+    padding: 0 13px;
+    color: white;
+    position: relative;
+}
+
+.div-main-demo h1{
+    text-transform: uppercase; 
+}
+.div-header-model a{
+    display: block;
+    margin-bottom: 10px;
+    padding: 20px;
+    color: white;
+    background-color: rgb(45, 127, 52);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.div-header-model h1 + a{
+    background-color: white;
+    color: #555;
+}
+
+.div-header-model h1 + a:hover{
+    background-color: rgb(45, 70, 127);
+    color: white;    
+}
+
+.div-header .div-mouse{
+ margin-top: 140px;
+ animation: movimento 2s linear infinite alternate;
+ -webkit-animation: movimento 2s linear infinite alternate;
+}
+
+@keyframes movimento{
+    from{
+        transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        -o-transform: translateY(-30px);
+}
+    to{
+        transform: translateY(0)    ;
+        -webkit-transform: translateY(0)    ;
+        -moz-transform: translateY(0)    ;
+        -ms-transform: translateY(0)    ;
+        -o-transform: translateY(0)    ;
+}
+}
+
+.div-main-demo{
+    padding: 10px 5%;
+}
+
+.main-article-prop{
+    width: 90%;
+    margin: 0 auto;
+}
+.main-article-prop img{
+    display: block;
+    width: 100%;
+    height: 150px;
+    transition: .4s ease-in-out;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -ms-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+}
+
+.main-article-prop:nth-of-type(1) img:hover{
+    margin-bottom: -20px;
+}
+.main-article-prop img:hover{
+    margin-top: -20px;
+}
+.div-pag{
+    padding: 10px 5px;
+    position: relative;
+    font-size: 30px;
+}
+
+.div-pag-resp, .div-pag-rec{
+    padding: 10px 5px;
+}
+.div-pag p:first-child{
+    text-transform: uppercase;
+}
+.div-pag p ~ p{
+    top: 80px;
+}
+
+.div-pag-resp{
+    background-color: #eee;
+    font-family: 'Segoe Script';
+}
+
+.div-pag-resp p:first-child{
+    font-size: 20px;
+    color: rgb(39, 39, 228);
+}
+
+.main-section-ferramentas{
+    display: block;
+    background-color: #eee;
+    width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.main-section-ferramentas:nth-of-type(10){
+    visibility: hidden;
+}
+
+.main-section-ferramentas img{
+    width: 100px;
+    height: 100px;
+}
+
+.propaganda-final{
+    background-color: rgb(82, 82, 245);
+    color: white;
+    border-bottom: 1px solid transparent;    
+}
+
+.propaganda-final article{    
+    padding: 130px 5%;
+}
+
+.propaganda-final .main-article-atendimento{
+    background-color: rgb(63, 63, 219);   
+}
+
+footer{
+    background-color: rgb(40, 40, 92);
+    color:white;
+    padding: 20px;
+}
+
+footer p{
+    font-size: 12px;
+}
+footer a{
+    display: block;
+    margin: -5px;
+    padding: 0;
+    color: rgb(125, 125, 235);
+    font-size: 16px;    
+}
+
+@media screen and (min-width: 486px){
+  
+    .div-header .div-mouse{
+        margin-top: 230px;
+    }
+    .div-header-model a{
+        display: inline-block;
+        padding: 22px 60px;
+        margin: 0 20px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+        transform: translateX(10%);
+        -webkit-transform: translateX(10%);
+        -moz-transform: translateX(10%);
+        -ms-transform: translateX(10%);
+        -o-transform: translateX(10%);
+}
+}
+
+@media screen and (min-width: 569px){
+    .main-section-ferramentas{
+        width: 45%;
+        display: inline-block;
+        margin: 10px;
+    }
+    .main-section-propaganda{
+        margin-top: 100px;
+    }
+    
+}
+
+@media screen and (min-width: 580px){
+    .div-header h1, .div-pag-resp p, .div-pag-resp p:first-child, .div-pag-rec p{
+        font-size: 35px;
+    }
+    
+}
+
+@media screen and (min-width: 641px){
+    .div-header h1{
+        font-size: 35px;
+    }
+    
+    .main-article-prop{
+        display: inline-block;
+        width: 28%;
+        margin-left: 10px;
+    }
+
+    .main-article-prop img{
+        height: 25%;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .div-header{
+        height: 500px;
+        position: relative;
+    }
+
+    .div-mouse{
+        display: inline-block;
+        position: absolute;
+        bottom: 5%;
+    }
+    .div-header h1{
+        font-size: 35px;
+    }
+    
+    .div-main-demo h1{
+        font-size: 50px;
+    }
+    .main-section-ferramentas{
+        display: inline-block;
+        width: 25%;
+    }
+
+    .main-article-prop img{
+        height: 25%;
+    }   
+    .propaganda-final{
+        height: 50%;
+    }
+    .propaganda-final article{
+        width: 30%;
+        max-height: 100%;
+        display: inline-block;
+        padding: 20% 2%;
+        box-sizing: border-box;
+        margin: 0;
+    }   
+    .propaganda-final .main-article-atendimento{
+        border-left: 1px solid rgba(190, 190, 190, 0.795);
+        border-right: 1px solid rgba(190, 190, 190, 0.795);
+    }
+}
+
+
+@media screen and (min-width: 992px){
+    .div-pag-rec{
+        padding: 30px 5px;
+    }
+    .main-section-ferramentas{
+        width: 20%;
+        display: inline-block;
+    }
+    .main-section-ferramentas:nth-of-type(10){
+        display: none;
+
+    }
+}

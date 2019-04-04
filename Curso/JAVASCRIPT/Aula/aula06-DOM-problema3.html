@@ -1,0 +1,35 @@
+<!doctype html>
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">        
+        <style>
+            label{
+                display: block;
+                margin: 10px 0;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+       
+        <label>Digite seu nome: <input type="text" id="txtNome"></label>
+        <label>Digite seu sobrenome: <input type="text" id="txtSobreNome"></label>
+        <button onclick="DarBoasVindas()">Clique aqui</button>
+         <div id="msg"></div>
+       
+       <script>          
+             var txtNome; 
+             var txtSobreNome = document.querySelector("#txtSobreNome"); 
+
+             function DarBoasVindas(){
+                 var Nome = document.querySelector("#txtNome").value;
+                 var SobreNome = txtSobreNome.value;
+                 document.querySelector("#msg").innerHTML = 'Bem vindo, <em>' + Nome + "<em> <strong>" + SobreNome + "<strong>";
+             }
+        </script>
+        
+    </body>
+</html>

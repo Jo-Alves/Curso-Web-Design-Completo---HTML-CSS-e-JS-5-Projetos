@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.calculator{
+    width:230px;
+    height: 350px;
+    margin: 20px auto;
+    background-color: rgb(205, 205, 248);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    display: grid;
+    grid-gap: 2.5px;
+    grid-template-columns: repeat(4, 45px);
+    grid-auto-rows: 45px;
+    grid-template-areas: "display display display display"                          
+                         "ac      porc    mult    div"
+                         "sete    oito    nove    igual"
+                         "quatro  cinco   seis    sub"                              
+                         "um      dois    tres    add"                              
+                         "zero    zero    virgula add";
+}
+
+.display{
+    font-family: 'DS-Digital', sans-serif;
+    font-size: 35px;
+    background-color: rgb(243, 235, 235);
+    grid-area: display;
+    box-shadow: inset 2px 2px 0 rgb(117, 116, 116);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.botao{
+    background-color: #eee;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    outline: none;
+}
+.ac{
+    grid-area: ac;
+}
+.porc{
+    grid-area:  porc;
+}
+.mult{
+    grid-area: mult;
+}
+
+.div{
+    grid-area: div;
+}
+.sete{
+    grid-area: sete;
+}
+.oito{
+    grid-area: oito;
+}
+.nove{
+    grid-area: nove;
+}
+.igual{
+    grid-area: igual;
+}
+.quato{
+    grid-area: quatro;
+}
+.cinco{
+    grid-area:  cinco;
+}
+.seis{
+    grid-area: seis;
+}
+.um{
+    grid-area: um;
+}
+.dois{
+    grid-area: dois;
+}
+.tres{
+    grid-area: tres;
+}
+.add{
+    grid-area: add;
+    background-color: #ccc;
+}
+.zero{
+    grid-area: zero;
+    background-color: #ccc;
+}
+.virgula{
+    grid-area: virgula;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>objeto customizado</title>
+    <style>
+        fieldset{
+            width: 10%;
+            margin: auto;
+        }
+        label{
+           display: block;
+           margin: 10px 0;
+           text-transform: uppercase;
+        }
+        #div{
+            width: 35%;
+            margin: auto;
+        }
+        button{
+            width: 100%;
+            height: 35px;
+            background-color: rgb(240, 80, 80);
+            color: white;
+            font-weight: bold;
+        }
+        span{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <label>Título<input type="text" name="" id="titulo"></label>
+        <label>Gênero<input type="text" name="" id="genero"></label>
+        <button onclick="EscreverDadosLivros()">Sub-Escrever</button>
+    </fieldset>
+    <div id="div">
+        <h1>Obra(s) Literária(s)</h1>
+    </div>
+    <script>
+        
+        function EscreverDadosLivros(){
+                var Livro = {
+                    titulo: document.querySelector("#titulo").value,
+                    genero: document.querySelector("#genero").value
+                };  
+                if(Livro.titulo == "" || Livro.genero == ""){
+                    alert("Preencha todos os campos.");
+                }
+                else{
+                 document.querySelector("#div").innerHTML += "<p><span>Título:</span> " + Livro.titulo + "</p><p> <span>Genero:</span> " + Livro.genero + "</p>";
+                }
+        }
+    </script>
+</body>
+</html>

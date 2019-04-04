@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="author" content="Jô Alves">
+        <meta name="description" content="praticando tabela">
+        <meta name="keywor" content="html5, tecnlogia, tabelas">
+        <meta charset="utf-8">
+        <title>trabalhando com tabela</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            table{
+                margin: auto;
+                border-collapse: collapse;
+            }
+            caption{
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-top: 20px;
+                padding: 20px;
+                border: 1px solid;
+                border-bottom:  none;
+            }
+            th{
+                border: 1px solid;
+                text-align: center;
+                text-transform: capitalize;
+                padding: 20px;
+            }
+            td{
+                border: 1px solid;
+                text-align: center;
+                padding: 10px;
+            }
+            tfoot td{
+                text-align: left;
+                transition: 1s linear;
+            }
+            tfoot td:hover{
+                text-align: center;
+            }
+            tbody .carro{
+                background-color: rgb(168, 245, 245);
+                padding: 0;
+                transition: background-color .5s linear;
+            }
+            tbody .carro:hover{
+                background-color:rgb(166, 236, 26);
+            }
+            tbody .moto{
+                background-color:rgb(75, 195, 231);
+                padding: 0;
+                transition: background-color .5s linear;
+            }
+            tbody .moto:hover{
+                background-color: rgb(97, 97, 180);
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>tabela de preços de automóvel</caption>
+            <thead>
+                <tr>
+                    <th>Tipo de automóvel</th>
+                    <th>marca</th>
+                    <th>modelo</th>
+                    <th>ano</th>
+                    <th>valor</th>
+                </tr>
+            </thead>
+
+            <tfoot>
+                <tr>
+                    <td colspan="5">O melhor preço da região</td>
+                </tr>
+            </tfoot>
+
+            <tbody>
+                <tr>
+                    <td rowspan="2" class="carro">Carro</td>
+                    <td>VolkWagem</td>
+                    <td>Golf</td>
+                    <td>2009</td>
+                    <td>R$ 38.500,00</td>
+                </tr>
+                <tr>
+                    <td>Fiat</td>
+                    <td>Palio</td>
+                    <td>2010</td>
+                    <td>R$ 61.500,00</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3" class="moto">Moto</td>
+                    <td>Yamaha</td>
+                    <td>XT 660</td>
+                    <td>2018</td>
+                    <td>R$ 30.620,00</td>
+                </tr>
+
+                <tr>
+                    <td>Yamaha</td>
+                    <td>Xj6</td>
+                    <td>2018</td>
+                    <td>RR$  33.190,00</td>
+                </tr>
+
+                <tr>
+                    <td>Honda</td>
+                    <td>NXR 160</td>
+                    <td>2018</td>
+                    <td> R$ 12.250,00</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </body>
+</html>

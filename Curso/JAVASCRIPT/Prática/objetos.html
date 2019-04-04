@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        fieldset, #output{
+            width: 15%;
+            margin: 0 auto;
+        }
+        label{
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+    <label>Título*: <input type="text" name="" id="titulo" required autofocus></label>
+    <label>Gênero*: <input type="text" name="" id="genero" required></label>
+    <label>Autor*: <input type="text" name="" id="autor" required></label>
+    <button onclick="Inserir()">Inserir</button>
+</fieldset>
+    <div id="output">
+
+    </div>
+    <script>
+
+      function Inserir()
+        {
+
+           (function() {
+               'use strict'
+            var titulo = document.querySelector("#titulo").value;
+            var genero = document.querySelector("#genero").value;;
+            var autor = document.querySelector("#autor").value;;
+
+            if(titulo == "" || genero == "" || autor == ""){
+               alert("Todos os campos são obrigatórios!");
+               document.querySelector("#titulo").autoFocus = false;
+            }
+            else{
+                function Livro(titulo, genero, autor){
+                var _titulo = titulo;
+                this.genero = genero;
+                this.autor = autor;
+                this.mudarTitulo = function(titulo){
+                    _titulo = titulo;
+                }
+                this.PegarTitulo = function(){
+                    return _titulo
+                }
+            }
+
+            var livro1 = new Livro(titulo, genero, autor);
+            document.querySelector("#output").innerHTML = "<h1>Livro Literário</h1></br></hr></br>Título: " + titulo + "</br>Gênero: " + genero + "</br>Autor: "+ autor;
+            } 
+           })()
+        }
+    </script>
+</body>
+</html>

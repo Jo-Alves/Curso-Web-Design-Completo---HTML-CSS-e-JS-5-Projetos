@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Links CSS</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Joelmir">
+        <meta name="description" content="Usando links com CSS">
+        <meta name="keyword" content="html5, tecnologia">
+        <style>
+             body{
+                 font-family: sans-serif;
+                 color: green
+             }   
+             a{
+                 color: green;
+             }    
+             a:hover{
+                 color:red;
+             }
+             /* O pseudo-classe link sempre deve vir primeiro link sempre deve */
+             a:link{
+                 color: blue;
+             }
+             a:visited{
+                 color: black;
+             }
+             a:active{
+                 background-color: aqua;
+             }
+             ul li{
+                 list-style: circle;
+             }
+             ol li{
+                 list-style-type: lower-roman;
+                 list-style-position: inside;
+             }
+
+        </style>
+    </head>
+    <body>
+        <a href="01-teste.html">veja o arquivo 01 teste "html"</a>
+        <a href="02 - tags - html.html">veja o segundo arquivo</a>
+
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+        <ol>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+    </ol>
+
+        <p>Parágrafo 1</p>
+    </body>
+</html>

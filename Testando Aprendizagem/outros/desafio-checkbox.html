@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Joelmir">
+        <meta name="description" content="Checkbox personalizado">
+        <meta name="keyword" content="html5, css, desafio">
+        <title>Checkbox personalizado</title>
+
+        <style>
+            body{
+                font-family: 'Times New Roman', Times, serif;
+            }
+            label{
+                margin-right: 20px;
+            }
+            .cb{
+                display: inline-block;
+                width: 60px;
+                height: 25px;
+                border-radius: 20px;
+                background-color: rgb(197, 192, 192);
+                position: relative;
+            }
+            label input[type="checkbox"] + .cb::before{
+                content: "";
+                width: 18px;
+                height: 18px;
+                background-color: red;
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                border-radius: 100%;
+                transition: .2s linear;
+            }
+
+            label input:checked + .cb::before{
+                content: "";
+                transform: translatex(200%);
+                background-color: rgb(41, 201, 41);
+                transition: .2s linear;
+            }
+
+
+             label input:checked ~ .cb::after{
+                content: "ON";
+                box-sizing: border-box;
+                position: absolute;
+                top: 3px;
+                left: 6px;
+            }
+
+            label input ~ .cb::after{
+                content: "OFF";
+                box-sizing: border-box;
+                position: absolute;
+                top: 3px;
+                left: 24px;
+            }
+
+            label input:focus + span{
+               box-shadow: 0 0 0 1px rgba(0,0,0,.5);
+                box-sizing: border-box;
+            }
+
+            input{
+                width: 1px;
+                height: 1px;
+                /* overflow: hidden;
+                visibility: hidden; */
+                margin: 0;
+                opacity: 
+            }
+
+        </style>
+    </head>
+    <body>
+        <label>
+            <input type="checkbox">
+            <span class="cb"></span>
+            Esporte
+        </label>
+
+        <label>
+            <input type="checkbox">
+            <span class="cb"></span>
+            Política
+        </label>
+
+        <label>
+            <input type="checkbox">
+            <span class="cb"></span>
+            Educação
+        </label>
+    </body>
+</html>

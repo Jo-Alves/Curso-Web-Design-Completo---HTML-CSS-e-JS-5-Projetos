@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Joelmir">
+        <meta name="description" content="Testando conhecimento">
+        <meta name="keyword" content="html5, css, Seletores">
+        <title>seletores CSS</title>
+        <style>
+        div p:nth-of-type(3){
+            color: rgb(236, 158, 158);
+        }
+
+        .destaque{
+            background-color: #ddd;
+        }
+        .destaque:nth-of-type(6){
+            color: blue;
+        }
+        </style>
+    </head>
+    <body>
+       <div>
+           <p>Meu Parágrafo</p>
+           <p>Meu Parágrafo</p>
+           <hr>
+           <p class="destaque">Meu Parágrafo</p>
+           <p>Meu Parágrafo</p>
+           <hr>
+           <p>Meu Parágrafo</p>
+           <p class="destaque">Meu Parágrafo</p>
+           <hr>
+           <p>Meu Parágrafo</p>
+           <p>Meu Parágrafo</p>
+           <hr>
+       </div>
+    </body>
+</html>

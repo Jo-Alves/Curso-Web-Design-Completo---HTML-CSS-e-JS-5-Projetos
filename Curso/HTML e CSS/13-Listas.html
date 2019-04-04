@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="author" content="Joelmir">
+        <meta name="description" content="Lista alinhadas e definidas">
+        <meta name="keyword" content="html, tecnologia">
+        <title>Listas alinhadas e definidas</title>
+
+        <style>
+        ul{
+            display: block;
+            list-style: none;
+        }
+        li:hover{
+            background-color: #ccc;
+        }
+        li ol{
+            height: 0;
+            overflow: hidden;
+           transition: height .5s linear;
+        }
+        li:hover ol{
+            height: 50px;
+        }
+
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>item 1</li>
+            <li>
+                item 2
+                <ol>
+                    <li>item 2.1</li>
+                    <li>item 2.2</li>
+                </ol>
+            </li>
+            <li>item 3</li>
+        </ul>
+
+        <hr>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Linguagem de marcação de texto</dd>
+
+            <dt>CSS</dt>
+            <dd>Linguagem para criação de folhas de estilos</dd>
+        </dl>
+        <dl>
+            <dt>www</dt>
+            <dt>iternet</dt>
+            <dd>rede mundial de computadores</dd>
+
+            <dt>Java Script</dt>
+            <dd>Linguagem Script para internet</dd>
+            <dd>script para rodar no browser</dd>
+        </dl>
+    </body>
+</html>

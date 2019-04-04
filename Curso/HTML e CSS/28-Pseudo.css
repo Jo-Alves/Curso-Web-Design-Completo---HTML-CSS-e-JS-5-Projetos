@@ -1,0 +1,20 @@
+p::first-letter{   
+    font-size: 20pt;
+    color: rgb(18, 233, 161);
+    display: inline-block;
+    margin-right: 10px;    
+}
+
+p::first-line{
+    color: rgb(245, 170, 57);
+}
+
+input::placeholder{
+    background-color:blue;
+  
+}
+
+input:focus{
+    background-color: aquamarine;
+   color: black;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Jô Alves">
+        <meta name="description" content="Trabalhando com formulários">
+        <meta name="keyword" content="html5, css3, form">
+        <title>Fomrulários</title>
+        <style>
+            #number{
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <label for="email">Email </label>
+                <input type="email" id="email" autofocus required placeholder="Digite um email válido"><br>
+                <label for="number">Número de filhos </label> <input type="number" min="0" max="10" id="number" step=".5"><br>
+                <label for="">Nascimento </label>
+                <input type="date" min="2018-01-31" max="2138-01-31">
+                <br>
+                <p>Sexo </p>
+                <label>
+                    <input type="radio" name="sexo" value="M">
+                    Masculino
+                </label>
+                <label>
+                    <input type="radio" name="sexo" checked value="F">
+                Feminino
+                </label>
+                <br>
+            <label>Estado</label>
+            <select name="estado" id="estado">
+                <option value="0">Selecione</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+            </select><br>
+            <fieldset>
+                <legend>Área de interesse</legend>
+
+                <label><input type="checkbox" name="html" value="html">HTML</label>
+                <label><input type="checkbox" name="css" value="css">CSS</label>
+                <label><input type="checkbox" name="js" value=js">JS</label>
+            </fieldset>
+            <br>
+                <fieldset>
+                    <legend>Mensagem</legend>
+                    <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+
+                    <textarea name="" id="" cols="30" rows="10"  style="resize:none; display: block;" dis readonly>Aqui  entra o texto do contrato que precisa ser aceito                   </textarea>
+                    <label>
+                        <input type="checkbox" checked>Li e aceito
+                    </label>
+                    <input type="range" min="0" max="10" step="4">
+                    <input type="time">
+                    <input type="color">
+
+                    <select size="2" multiple>
+                        <option value="">Opção 1</option>
+                        <option value="">Opção 2</option>
+                        <option value="">Opção 3</option>
+                        <option value="">Opção 4</option>
+                        <option value="">Opção 5</option>
+                    </select>
+                </fieldset>
+                <br>
+                <input type="submit" value="Mandar">           <input type="button" value="Botão">    
+                <input type="reset" value="Resetar">
+                
+            </fieldset>
+        </form>
+    </body>
+</html>

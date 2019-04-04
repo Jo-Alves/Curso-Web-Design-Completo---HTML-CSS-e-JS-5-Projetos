@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            display: block;
+            margin: 10px 0;
+        }
+        fieldset{
+            display: inline-block;
+            margin: 30px 0;
+        }
+        button{
+            color: white;
+            background-color: rgb(99, 99, 214);
+            width: 100%;
+            height: 30px;
+            border-color: aqua;
+        }
+        .element{
+            display: block;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>Dados</legend>
+            <input type="text" name="" id="txtNome" placeholder="Seu nome" autofocus required>
+            <input type="text" name="" id="txtSobreNome" placeholder="Seu sobrenome" required>
+            <input type="date" name="" id="dtNascimento" placeholder="Sua data de nescimento" required>
+            <button onclick="EscreverDados()">Cadastrar</button>
+        
+    </fieldset>
+        <div id="element"></div>
+    <script src="js.js"></script>
+</body>
+</html>

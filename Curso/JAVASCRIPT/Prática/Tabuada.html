@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabuada</title>
+    <style>
+        label{
+            margin-left: 50px;
+            display: block;           
+        }
+        input[type="text"]{
+            display: block;
+            margin: 0 auto 10px;
+            height: 20px;
+        }
+        fieldset{
+            width: 270px;   
+            display: block;         
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+           align-items: center
+        }
+        .container-resultado{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .adicao, .subtracao, .multiplicacao, .divisao{
+            display: inline-block;
+            float: left;
+            margin-left: 10px;
+        }      
+        input[type="reset"]{
+            width: 100%;
+            margin-top: 10px;
+            height: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form action="#">
+            <fieldset>
+                <legend>Campos para o cálculo da tabuada</legend>
+                <form action="#" autocomplete="off">
+                    <label for="">Valor </label>
+                    <input type="text" name="" id="valor" placeholder="Digite o valor para a tabuada"  autocomplete="off">
+                    <button id="somar">Somar</button>
+                    <button id="subtrair">Subtrair</button>
+                    <button id="multiplicar">Multiplicar</button>
+                    <button id="dividir">dividir</button>
+                    <input type="reset" value="Limpar" id="limpar">
+                </form>
+            </fieldset>
+        </form>
+    </div>
+    <div class="container-resultado">
+            <div class="adicao"></div>
+            <div class="subtracao"></div>
+            <div class="multiplicacao"></div>
+            <div class="divisao"></div>
+        </div>     
+   
+    <script>
+        (function(){
+            var $valor = document.getElementById("valor");
+            var $btnSoma = document.getElementById("somar");
+            var $btnSubtrair = document.getElementById("subtrair");
+            var $btnMultiplicar = document.getElementById("multiplicar");
+            var $btnDividir = document.getElementById("dividir");
+            var $limpar = document.getElementById("limpar");
+            var resultado = 0;    
+
+              
+
+            $btnSoma.addEventListener('click', Somar);
+            $btnSubtrair.addEventListener("click", Subtrair);
+            $btnMultiplicar.addEventListener("click", Multiplicar);
+            $btnDividir.addEventListener("click", Dividir);
+            $limpar.addEventListener("click", Limpar)
+            
+            function Somar(){
+              
+                    for(var i = 1; i <= 10; i++)
+                    {   console.log($valor.value);
+                        resultado = parseFloat($valor.value) + i;
+                        document.querySelector(".adicao").innerHTML += $valor.value + " + " + i + " = " + resultado + "<br>"
+                    }
+            }
+            function Subtrair(){
+              
+              for(var i = 1; i <= 10; i++)
+              {   console.log($valor.value);
+                  resultado = parseFloat($valor.value) - i;
+                  document.querySelector(".subtracao").innerHTML += $valor.value + " - " + i + " = " + resultado + "<br>"
+              }
+            }
+            function Multiplicar(){
+              
+              for(var i = 1; i <= 10; i++)
+              {   console.log($valor.value);
+                  resultado = parseFloat($valor.value) * i;
+                  document.querySelector(".multiplicacao").innerHTML += $valor.value + " * " + i + " = " + resultado + "<br>"
+              }
+            }
+
+            function Dividir(){
+              
+              for(var i = 1; i <= 10; i++)
+              {   console.log($valor.value);
+                  resultado = parseFloat($valor.value) / i;
+                  document.querySelector(".divisao").innerHTML += $valor.value + " / " + i + " = " + resultado + "<br>"
+              }
+            }
+
+            function Limpar(){
+                document.querySelector('.adicao').innerHTML = "";
+                document.querySelector('.subtracao').innerHTML = "";
+                document.querySelector('.divisao').innerHTML = "";
+                document.querySelector('.multiplicacao').innerHTML = "";
+            }
+        })()
+    </script>
+</body>
+</html>

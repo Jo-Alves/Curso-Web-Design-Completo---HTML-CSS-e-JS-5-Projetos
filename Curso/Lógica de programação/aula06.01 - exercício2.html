@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linguagens de programação JAVASCRIPT</title>
+    
+</head>
+<body>
+    <div id="output">
+        </div>
+        <script>
+                var soma = 0;
+                var ver = 0;
+               var arr = new Array(25, 30, 45, 28, 0 , 12 , 78, 64)
+
+               for(var i = 0; i < arr.length; i++)
+               {
+                    var ver = arr[i] % 2;
+                    if(ver == 0)
+                    {
+                        soma += arr[i];
+                    }
+               }
+
+               alert( "A soma dos valores pares é igual a " + soma);
+              
+        </script>
+</body>
+</html>

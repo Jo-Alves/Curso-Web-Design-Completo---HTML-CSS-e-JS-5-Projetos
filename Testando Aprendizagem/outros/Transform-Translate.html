@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Joelmir">
+        <meta name="description" content="Testando conhecimento">
+        <meta name="keyword" content="html5, css, Seletores">
+        <title>seletores CSS</title>        <link rel="stylesheet" href="29-Transform.css">  
+        <style>
+           
+div{
+    box-sizing: border-box;
+    line-height: 175px;
+    font-family: tangerine;
+    font-size: 20pt;
+    text-align: center;
+    color: black;
+    width: 200px;
+    height: 200px;
+    font-weight: bolder;
+}
+div::first-letter{
+    font-size: 30pt;
+}
+.div1, .div4{
+    color: white;
+}
+
+.div1{
+    
+    background-color: red;
+    transform: translate(100%,200%);
+    -webkit-transform: translate(100%,200%);
+    -moz-transform: translate(100%,200%);
+    -ms-transform: translate(100%,200%);
+    -o-transform: translate(100%,200%);
+}
+
+.div2{
+    box-sizing: border-box;
+    line-height: 175px;
+    font-family: tangerine;
+    font-size: 20pt;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    
+}
+
+.div3{
+    background-color: brown;
+    transform: translate(200%,-100%);
+    -webkit-transform: translate(200%,-100%);
+    -moz-transform: translate(200%,-100%);
+    -ms-transform: translate(200%,-100%);
+    -o-transform: translate(200%,-100%);
+}
+
+.div4{
+    background-color: rgb(66, 191, 244);
+    transform: translate(100%,-300%);
+    -webkit-transform: translate(100%,-300%);
+    -moz-transform: translate(100%,-300%);
+    -ms-transform: translate(100%,-300%);
+    -o-transform: translate(100%,-300%);
+}
+    </style>     
+    </head>
+    <body>
+       <div class="div1">Propriedade Transform</div>
+       <div class="div2">Propriedade Transform</div>
+       <div class="div3">Propriedade Transform</div>
+       <div class="div4">Propriedade Transform</div>
+    </body>
+</html>
