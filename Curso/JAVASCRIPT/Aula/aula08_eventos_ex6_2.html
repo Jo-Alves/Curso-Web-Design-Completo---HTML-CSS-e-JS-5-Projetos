@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+</head>
+<body>
+    <div class="container">
+       <input type="text" name="" id="txtTask">
+       <button id="btn" >Cadastrar</button>
+       
+       <ul>
+            <li>Estudar JavaScript</li>
+            <li>Estudar Eventos</li>
+            <li>Jogar video-game</li>
+       </ul>
+    </div>    
+
+    <script>
+        (function(){
+            'use strict'
+           
+           var $ul = document.querySelector("ul");
+           var $txtTask = document.querySelector("#txtTask");
+           var $btn = document.querySelector("#btn");
+
+            $btn.addEventListener("click", addTask);
+            $txtTask.addEventListener('keyup', function(e){
+              if(e.keyCode === keys.Enter){
+                  addTask();
+              }
+            })
+            function addTask(){
+                var task = "<li>" + $txtTask.value + "</li>";
+                $ul.innerHTML += task;
+                $txtTask.value = "";
+                $txtTask.focus();
+            }
+            })()
+    </script>
+</body>
+</html>

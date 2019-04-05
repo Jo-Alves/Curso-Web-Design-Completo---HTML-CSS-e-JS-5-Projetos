@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Criar movos elementos</title>
+</head>
+<body>
+    <input type="text" name="" id="text" autofocus>
+    <button id="btn">Salvar</button>
+    <ul>
+        <li>Valdirene</li>
+        <li>Joelmir</li>
+    </ul>
+
+    <script>
+        (function(){
+            var $ul = document.querySelector("ul");
+            var $text = document.querySelector("#text");
+            var $btn = document.querySelector("#btn");
+
+            $btn.addEventListener("click", Salvar);
+            $text.addEventListener("keyup", function(e){
+               if(e.keyCode === 13){
+                    Salvar();
+                }
+            })
+            function Salvar(){
+            
+                var novaLi = document.createElement("li");
+                var novoTexto = document.createTextNode($text.value);
+                novaLi.appendChild(novoTexto);
+                $ul.appendChild(novaLi)
+                $text.value= "";
+                $text.focus();
+            }
+
+        })()
+    </script>
+</body>
+</html>

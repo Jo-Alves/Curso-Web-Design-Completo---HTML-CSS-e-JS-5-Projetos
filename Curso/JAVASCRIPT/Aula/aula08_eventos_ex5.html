@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+</head>
+<body>
+    <div class="container">
+        <button>Botão 1</button>
+        <button>Botão 2</button>
+        <button>Botão 3</button>
+       
+    </div>    
+
+    <script>
+        (function(){
+            'use strict'
+            var $btns = document.getElementsByTagName("button");
+
+            for( var i = 0; i < $btns.length; i++){
+                $btns[i].addEventListener("click", Clicou);
+            }
+           
+            function Clicou(){
+                console.log(this.textContent);
+            }
+           
+            })()
+    </script>
+</body>
+</html>
