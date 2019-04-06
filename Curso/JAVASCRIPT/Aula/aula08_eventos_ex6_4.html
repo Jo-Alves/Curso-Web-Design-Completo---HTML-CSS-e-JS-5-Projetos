@@ -43,15 +43,17 @@
            $ul.addEventListener("click", function(e){
                if(e.target.nodeName === 'LI')
                {
-                   toogleDone(e.target);
+                   removeTask(e.target);
                }
            })
 
-            function toogleDone(li){
-                li.classList.toggle("done")
-            }
+           function removeTask(li){
+               if(confirm("Deseja realmente excluir a terefa \n" + li.textContent + "?")){
+                    li.parentNode.removeChild(li);
+               }
+           }
 
-            function addTask(){
+               function addTask(){
                var li = document.createElement("li");
                var text = document.createTextNode($txtTask.value);
                li.appendChild(text);
