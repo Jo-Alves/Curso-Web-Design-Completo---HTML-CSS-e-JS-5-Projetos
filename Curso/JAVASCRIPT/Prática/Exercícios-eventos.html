@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>Mostrar mensagem</button>
+    <p class="id-resultado"></p>    
+    <script>
+        var $btn = document.querySelector("button");
+        var $p = document.querySelector("p");
+        var Passou = false;
+        document.querySelector("button").addEventListener("click", function(){
+            debugger
+            if(Passou === false){
+                $p.textContent = "Olá mundo";
+                $btn.textContent = "limpar";
+                Passou = true;
+            }
+            else{
+                $btn.textContent = "Mostrar mensagem";
+                $p.textContent = "";
+                Passou = false;
+            }
+        })
+    </script>
+</body>
+</html>
