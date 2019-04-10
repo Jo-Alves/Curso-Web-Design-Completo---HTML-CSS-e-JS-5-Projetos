@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    <script>
+        
+        var nome = "Daniel Tapias Morales";
+        var nomeFormatado = formatarNome(nome);
+
+        function formatarNome(nome){
+            var posicaoUltimoEspaco = nome.lastIndexOf(" ");
+            if(posicaoUltimoEspaco <= 0){
+                return nome;
+            }
+
+            var ultimoNome = nome.slice(posicaoUltimoEspaco + 1);
+            console.log("último nome", ultimoNome);
+
+            var primeiroNome = nome.slice(0, posicaoUltimoEspaco);
+            console.log("posicao último Espaço", posicaoUltimoEspaco);
+            return ultimoNome +  ", " +  primeiroNome;
+        }
+
+        console.log(nomeFormatado);
+    </script>    
+</body>
+</html>

@@ -1,0 +1,125 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    height: 100vh;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner{
+    background: url(manual-da-mulher-poderosa.jpg);
+    background-size: cover;
+    background-position-x: -10%;
+    background-repeat: no-repeat;
+}
+
+section#banner .content{
+    text-align: center;
+}
+
+section#banner .content h1{
+   font-size: 120px;
+   color: #fff;
+   text-transform: uppercase;
+   margin:  0 0 20px;
+   padding: 0;
+}
+
+section#banner .content a{
+border: 2px solid #fff;
+color: #fff;
+padding: 10px 40px;
+font-size: 24px;
+text-decoration: none;
+font-weight: 500;
+text-transform: uppercase;
+}
+
+section#banner .content a:hover{
+    background-color: #ff0;
+    border: 2px solid #ff0;
+    color: #262626;
+}
+
+.post{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: #fff;
+}
+.post img{
+  object-fit: cover; 
+  width: 800px;
+    height: 400px;
+}
+
+.post .btn{
+    position: absolute;
+    border: 2px solid #262626;
+    color: #262626;
+    background-color: #ff0;
+    padding: 10px 40px;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.post .btn.prev{
+    top: 50px;
+    left: -80px;
+}
+
+.post .btn.next{
+    bottom: 50px;
+    right: -80px;
+}
+
+.post-title{
+    position: absolute;
+    background-color: rgba(0,0,0,.9);
+    color: #fff;
+    bottom: 0px;
+    left: 0px;
+    font-size: 32px;
+    padding: 20px 30px;
+    line-height: 40px;
+    width: calc(100% - 100px);
+}
+
+.post-date{
+    position: absolute;
+    border: 2px solid #262626;
+    top: 5px;
+    right: 5px;
+    background: #ff0;
+    color: #262626;
+    padding: 20px;
+}
+
+.post-date span{
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.post-date span:nth-child(1){
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.post-date span:nth-child(2),
+.post-date span:nth-child(3){
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>        
+       
+      <script>
+    
+        var arr = ['10',20,3,4,5, "kasd", 20, '30'];
+
+        var SohNumeros = arr.every(function(el){            
+            return typeof el === 'number';
+        })
+        console.log(SohNumeros);
+
+        var aoMenoUmNumeros = arr.some(function(el){            
+            return typeof el === 'number';
+        })
+        console.log(aoMenoUmNumeros);
+
+        var numeros = arr.filter(function(el, i, obj){
+            return typeof el === 'number';
+        });
+        console.log(numeros);
+
+        arr.forEach(function(el, i, obj){
+            console.log("el = ", el, ', i = ', i, ', obj = ', arr.toString());            
+        });
+
+        var posicaoStri1 = arr.indexOf('kasd', 6);
+        console.log("Posição ", posicaoStri1);
+
+        var posicaoStri1 = arr.indexOf(20, 5);
+        console.log("Posição do IndexOf ", posicaoStri1);
+        var posicaoStri2 = arr.lastIndexOf(20, 5);
+        console.log("Posição do LastIndexOf ", posicaoStri2);
+      </script>
+        
+    </body>
+</html>
