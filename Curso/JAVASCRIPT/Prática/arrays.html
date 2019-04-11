@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elementos Array</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Incluir Arrays primeiro elementos</legend>
+        <label for="array1">Inclua números para o array</label> <input type="text" id="array1">
+        <button id="btnIncluir1">Incluir</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Incluir Arrays ultimos elementos</legend>
+        <label for="array2">Inclua números para o array</label> <input type="text" id="array2">
+        <button id="btnIncluir2">Incluir</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Excluir Arrays</legend>
+        <button id="btnExcluir1">Excluir último elemento</button>
+        <button id="btnExcluir2">Excluir Primeiro elemento</button>
+    </fieldset>
+
+    
+    <span>Array: </span> <span id="span">
+    </span>
+    <script>
+       var $array1 = document.querySelector("#array1");
+       var $array2 = document.querySelector("#array2");
+       var $array3 = document.querySelector("#array3");
+       var $array4 = document.querySelector("#array4");
+        var arr = [];
+
+       var $btnExcluir1 = document.querySelector("#btnExcluir1");
+       var $btnExcluir2 = document.querySelector("#btnExcluir2");
+       var $btnIncluir1 = document.querySelector("#btnIncluir1");
+       var $btnIncluir2 = document.querySelector("#btnIncluir2");
+       var $btnFiltrar = document.querySelector("#btnFiltrar");
+       var $select = document.querySelector("#select");
+
+        $btnIncluir1.addEventListener("click", function(){
+             arr.unshift($array1.value);             
+             document.querySelector("#span").textContent = arr;
+             $array1.value = "";
+             $array1.focus();
+        });
+        $btnIncluir2.addEventListener("click", function(){
+             arr.push($array2.value);             
+             document.querySelector("#span").textContent = arr;
+             $array2.value = "";
+             $array2.focus();
+        });
+
+        $btnExcluir1.addEventListener("click", function(){
+            arr.pop();
+            document.querySelector("#span").textContent = arr;
+            $array3.value = "";
+            
+        })
+
+        $btnExcluir2.addEventListener("click", function(){
+            arr.shift();
+            document.querySelector("#span").textContent = arr;
+            $array4.value = "";
+        })        
+
+     
+    </script>
+</body>
+</html>

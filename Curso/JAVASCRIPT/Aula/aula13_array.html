@@ -37,6 +37,61 @@
         console.log("Posição do IndexOf ", posicaoStri1);
         var posicaoStri2 = arr.lastIndexOf(20, 5);
         console.log("Posição do LastIndexOf ", posicaoStri2);
+
+        console.log(numeros);
+        numeros = numeros.map(function(el, i, arr){
+            return el * i;            
+        });
+        console.log(numeros);
+
+        var arr2 = arr.concat(numeros,"Olá Mundo!", "Quero a vida eterna no céu com Jesus Cristo Filho de Deus Vivo"); // Concatena arrays com outros arrays e elementos
+        console.log(arr2);
+
+        var str = arr2.join("-"); // Converte os elemetos do array para uma string
+        console.log(str);
+
+        arr.push("novo", "item"); // incrementa novos elementos no final do array 
+        console.log(arr);
+
+        
+
+        var UltimoElemento = arr.pop(); // Exclui o último elemento do array
+        console.log(UltimoElemento); 
+        console.log(arr);
+
+        var PrimeiroElemento = arr.shift(); // exclui o primero elemento do array
+        console.log(PrimeiroElemento);
+        console.log(arr);
+
+        arr.unshift(true, false, 'unshift'); // incrementa novos elementos no início do array 
+        console.log(arr);
+
+        numeros.shift();
+        var SomaArr = numeros.reduce(function(anterior, atual, i){
+            console.log("anterior: ", anterior, "atual: ", atual, "indice: ", i);
+            return anterior + atual + i;
+        }, 1);
+        console.log(numeros);
+        console.log(SomaArr);
+
+        var testeReduce = ['1', '2', '3', '4', '5'].reduceRight(function
+        (i, a){
+            return i + a;
+        })
+        console.log(testeReduce);
+
+        var arr3 = [0,10,20,30,40,50];
+        arr3.reverse()
+        console.log(arr3);
+
+        var arr4 =  [0,10,20,30,40,50, 60, 70, 80, 100]
+        console.log(arr4);
+        console.log(arr4.slice(2, 5)); // Vai contar da posição que foi escolhida até a segunda posição
+
+        var arrr = arr4.splice(2, 3, 25, 35, 45);
+        console.log(arr4);
+        console.log(arrr);
+        console.log(arr4);
       </script>
         
     </body>
