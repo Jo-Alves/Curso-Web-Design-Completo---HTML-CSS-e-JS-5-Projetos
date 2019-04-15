@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .destaque{
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <button id="btnAdd">Criar Classe</button>
+    <button id="btnRemove">Remover Classe</button>
+    <button id="btnToggle">Criar e remover a Classe ao mesmo tempo</button>
+    <div></div>
+    <script>
+        var $btnAdd = document.querySelector("#btnAdd");
+        var $btnRemove = document.querySelector("#btnRemove");
+        var $btnToggle = document.querySelector("#btnToggle");
+        var $div = document.querySelector("div");
+
+        $btnAdd.addEventListener("click", function(){
+            $div.classList.add("destaque");
+            $div.textContent = $div.classList;
+        });
+
+        $btnRemove.addEventListener("click", function(){
+            $div.classList.remove("destaque");
+            $div.textContent = $div.classList;
+        });
+
+        $btnToggle.addEventListener("click", function(){
+            $div.classList.toggle("destaqueVisual");
+            $div.textContent = $div.classList;
+        })
+    </script>
+</body>
+</html>

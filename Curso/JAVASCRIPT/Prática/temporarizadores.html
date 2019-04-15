@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button class="timeOut">SetTimeOut</button>
+    <button class="LimparTime">LimparTimeOut</button>
+    <button class="Intervalo">setInterval</button>
+    <button class="LimparIntervalo">Limpar Intervalo</button>
+    <div></div>
+
+    <script>
+        (function(){
+            $timeOut = document.querySelector(".timeOut");
+            $LimparTime = document.querySelector(".LimparTime");
+            $Intervalo = document.querySelector(".Intervalo");
+            $LimparIntervalo = document.querySelector(".LimparIntervalo");
+            $panel = document.querySelector("div");
+            
+            
+            $timeOut.addEventListener("click", TempoEntrada);
+            $LimparTime.addEventListener("click", LimparTempo);
+            $Intervalo.addEventListener("click", IntervaloTempo);
+            $LimparIntervalo.addEventListener("click", LimparIntervalo);
+
+            var Limp, Inter, executouHora = false, executou = false;
+            
+            function TempoEntrada(){
+                executou = true;                
+                $panel.textContent = "";
+                
+                Limp = setTimeout(function(){
+                    $panel.textContent = "Aprendendo a trabalhar com temporizadores";
+                    executou = false;
+                    $panel.style.fontFamily = "sans-serif";
+                $panel.style.fontSize = '16px'
+                LimparTempo();
+                LimparIntervalo();
+                }, 2000)               
+            }
+
+            function LimparTempo(){
+                if(executou){
+                    clearTimeout(Limp);
+                    $panel.textContent = "Parou antes de executar";                    
+                    executou = false;
+                }               
+            }
+            
+            function IntervaloTempo(){
+                executouHora = true;
+                Inter = setInterval(function(){
+                   var data = new Date();
+                   $panel.textContent = data.toLocaleTimeString();
+                }, 0);
+                $panel.style.fontFamily = "DS-Digital";
+                $panel.style.fontSize = '60px'
+            }
+
+            function LimparIntervalo(){
+                if(executouHora){
+                    clearInterval(Inter);
+                $panel.textContent = "Parou executar a hora";
+                executouHora = false;
+                }
+               
+            }
+
+        })()
+    </script>
+</body>
+</html>

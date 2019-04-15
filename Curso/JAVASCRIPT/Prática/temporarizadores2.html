@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;           
+            align-items: center;
+            justify-content: center;
+
+        }
+        div{
+            width: 300px;
+            text-align: justify;
+            border: 1px solid;
+            padding: 10px 10px;
+            display: none;
+        }
+        div .fechar{
+            margin-left: 270px;         
+            cursor: default;
+        }
+        div .fechar:hover{
+            color: white;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+   <div>
+       <button class="fechar">X</button>
+       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, dolor? Nobis blanditiis inventore dolor porro itaque illo. Molestias illo voluptatibus aut explicabo, ipsum ipsam saepe dolores voluptas cumque ullam voluptates?</p>
+   </div>
+
+   <script>
+       var $panel = document.querySelector("div");
+       var $btn = document.querySelector("button");
+
+       $btn.addEventListener("click", escondePanel);
+
+       var FecharAutomaticamente = setTimeout(function(){
+        $panel.style.display = "block";
+        fecharPanel = setTimeout(escondePanel, 10000);
+       }, 5000)
+
+       function escondePanel(){
+        $btn.removeEventListener("click", escondePanel);
+        $panel.parentNode.removeChild($panel);
+        clearTimeout(FecharAutomaticamente);
+       }
+   </script>
+</body>
+</html>

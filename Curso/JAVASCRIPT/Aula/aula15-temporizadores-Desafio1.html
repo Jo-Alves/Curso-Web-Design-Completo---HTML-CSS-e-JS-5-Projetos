@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="relogio"></div>
+    <script>
+        (function(){
+           
+         var $relogio = document.querySelector("#relogio");
+          var dataAtual =  new Date();
+        var hora = dataAtual.getHours();
+        var minuto = dataAtual.getMinutes();
+        var segundos = dataAtual.getSeconds();
+
+       
+       
+         function MostrarRelogio(){
+            if(segundos <= 58){
+                ++segundos;
+            }
+            else{
+                segundos = 0;
+                minuto++;
+            }
+
+            if(minuto > 58){
+                minuto = 0;
+                ++hora;
+            }
+
+            if(hora > 23){
+                hora = 0;
+                minuto = 0;
+                hora = 0;
+            }
+
+            hora = hora < 10 ? '0' + hora : hora;
+            minuto = minuto < 10 ? '0' + minuto : minuto;
+            segundos = segundos < 10 ? '0' + segundos : segundos
+
+            $relogio.textContent = hora + ":" + minuto + ":" + segundos;
+
+         }
+
+         setInterval(MostrarRelogio, 1000);
+        })()
+    </script>
+</body>
+</html>

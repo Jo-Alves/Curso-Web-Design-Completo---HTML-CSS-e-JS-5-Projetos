@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+        
+        <style type="text/css">
+            .teste{
+                background-color: red;
+            }
+           
+	    </style>
+        
+    </head>
+    <body>
+       
+        <h1>Javascript Completo</h1>
+        
+        <div class="teste">Apenas um teste</div> 
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quod voluptatem libero adipisci fugiat nobis maxime voluptates laudantium modi quo reprehenderit perferendis deserunt, eaque neque quidem pariatur sit debitis voluptatum!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, vitae! Maxime illum ad, dolores porro doloremque, adipisci at voluptas suscipit exercitationem tempora repellat non optio illo quis aliquam sunt placeat!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, vitae! Maxime illum ad, dolores porro doloremque, adipisci at voluptas suscipit exercitationem tempora repellat non optio illo quis aliquam sunt placeat!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, vitae! Maxime illum ad, dolores porro doloremque, adipisci at voluptas suscipit exercitationem tempora repellat non optio illo quis aliquam sunt placeat!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, vitae! Maxime illum ad, dolores porro doloremque, adipisci at voluptas suscipit exercitationem tempora repellat non optio illo quis aliquam sunt placeat!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, vitae! Maxime illum ad, dolores porro doloremque, adipisci at voluptas suscipit exercitationem tempora repellat non optio illo quis aliquam sunt placeat!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, vitae! Maxime illum ad, dolores porro doloremque, adipisci at voluptas suscipit exercitationem tempora repellat non optio illo quis aliquam sunt placeat!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, vitae! Maxime illum ad, dolores porro doloremque, adipisci at voluptas suscipit exercitationem tempora repellat non optio illo quis aliquam sunt placeat!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, vitae! Maxime illum ad, dolores porro doloremque, adipisci at voluptas suscipit exercitationem tempora repellat non optio illo quis aliquam sunt placeat!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, vitae! Maxime illum ad, dolores porro doloremque, adipisci at voluptas suscipit exercitationem tempora repellat non optio illo quis aliquam sunt placeat!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, vitae! Maxime illum ad, dolores porro doloremque, adipisci at voluptas suscipit exercitationem tempora repellat non optio illo quis aliquam sunt placeat!</p>
+
+        <div class="teste2">Apenas o segndo teste</div>
+        <script>
+            var $teste = document.querySelector(".teste");
+            
+            console.log("bg: ", $teste.style.backgroundColor);
+            
+            console.log(getComputedStyle($teste).backgroundColor);
+
+            var $p = document.querySelector('p');
+            console.log( 'Altura: ', $p.offsetHeight, ' Largura: ', $p.offsetWidth);
+            console.log('topo: ', $p.offsetTop, 'Esquerdo: ',  $p.offsetLeft);
+
+            console.log("_________ DIV ____________")
+            var $teste2 = document.querySelector(".teste2");
+            console.log("Topo: ", $teste2.offsetTop, "Esquerdo", $teste2.offsetLeft);
+
+            console.log($teste2.getBoundingClientRect());
+        </script>
+  
+        
+    </body>
+</html>

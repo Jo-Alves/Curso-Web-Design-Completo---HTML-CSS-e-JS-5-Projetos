@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function(){
+          var dataAtual = new Date(2019, 08, 01);
+          var Dia = dataAtual.getDate();
+          var Mes = dataAtual.getMonth() + 1;
+          var Ano = dataAtual.getFullYear();
+            if(Mes < 10){
+                Mes = '0' + Mes;
+            }
+            if (Dia < 10){
+                Dia = '0' + Dia;
+            }
+         document.querySelector("body").innerHTML = Dia + "/" + Mes + "/" + Ano;
+        })()
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 13 array desafio</title>
+    <style>
+        .destaque{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Sint quos unde iure a dolore recusandae atque minima iusto 
+    nobis beatae at iste, JavaScript blanditiis veritatis adipisci facilis
+    impedit? Nostrum, repellat quae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Sint quos unde iure a dolore recusandae atque minima iusto 
+    nobis beatae at iste, blanditiis veritatis adipisci facilis
+    impedit? Nostrum, repellat quae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Sint quos unde iure a dolore recusandae atque minima iusto 
+    nobis beatae at iste, blanditiis veritatis adipisci facilis
+    impedit? Nostrum, repellat quae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Sint quos unde iure a dolore recusandae atque minima iusto 
+        nobis beatae at iste, JavaScript blanditiis veritatis adipisci facilis
+        impedit? Nostrum, repellat quae.</p>
+
+     <script>
+           var paragrafos = document.querySelectorAll("p");
+            
+           for(var i = 0; i < paragrafos.length; i++){
+              paragrafos[i].innerHTML = FormataParagrafo(paragrafos[i].innerHTML, i)
+           }
+
+           
+           function FormataParagrafo(texto, i){
+            var arr = texto.split(' ');
+               console.log(arr);
+
+              var Palavra = arr.indexOf('JavaScript');
+              console.log('posição', Palavra);
+
+              if(Palavra > -1){
+                paragrafos[i].classList.toggle("destaque");
+              }
+
+              return texto;
+           }
+       </script>
+</body>
+</html>

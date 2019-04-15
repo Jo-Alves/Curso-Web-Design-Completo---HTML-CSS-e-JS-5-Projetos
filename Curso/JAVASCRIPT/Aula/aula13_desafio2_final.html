@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 13 array desafio</title>
+    <style>
+        .destaque{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quos unde iure a dolore recusandae atque minima iusto nobis beatae at iste, JavaScript blanditiis veritatis adipisci facilis impedit? Nostrum, repellat quae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quos unde iure a dolore recusandae atque minima iusto nobis beatae at iste, blanditiis veritatis adipisci facilis impedit? Nostrum, repellat quae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quos unde iure a dolore recusandae atque minima iusto nobis beatae at iste, blanditiis veritatis adipisci facilisimpedit? Nostrum, repellat quae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quos unde iure a dolore recusandae atque minima iusto nobis beatae at iste, JavaScript blanditiis veritatis adipisci facilis impedit? Nostrum, repellat quae.</p>
+
+    <script>
+        var paragrafos = document.querySelectorAll("p");
+         
+        for(var i = 0; i < paragrafos.length; i++){
+         var temJs = paragrafos[i].textContent.indexOf("JavaScript") >= 0
+         paragrafos[i].className = temJs ? "destaque" : ''
+        }
+
+
+
+    </script>
+</body>
+</html>
