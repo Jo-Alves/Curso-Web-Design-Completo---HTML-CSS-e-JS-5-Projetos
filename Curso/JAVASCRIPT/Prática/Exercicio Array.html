@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulando arrays</title>
+</head>
+<body>    
+    <div class="arrays"></div>
+    <button class="btnRemover" style="margin: 20px 0;">Remover</button>
+    <button class="btnOrdenar">Ordenar Array</button>
+    <button class="btnOrdenarReverse">Ordenar por reverse Array</button>
+    <button class="btnAdicionar">Adicionar Elementos</button>
+    <button class="mostrar">Mostrar com laço for</button>
+    <div class="indices"></div>
+    <script>
+        (function(){
+
+           var frutas = ["maça", "morango", 'banana', 'melão', 'mamão'] ;
+            var $btnRemover = document.querySelector(".btnRemover"),
+            $btnOrdenar = document.querySelector(".btnOrdenar"),
+            $btnAdicionar = document.querySelector(".btnAdicionar"),
+            $mostrar = document.querySelector(".mostrar"),
+            $btnOrdenarReverse = document.querySelector(".btnOrdenarReverse");
+
+           document.querySelector(".arrays").textContent = frutas;
+           
+           $btnRemover.addEventListener("click", function(){
+               frutas.splice(0, 2);
+               document.querySelector(".arrays").textContent = frutas;
+           })
+
+           $btnOrdenar.addEventListener("click", function(){
+               frutas.sort();
+               document.querySelector(".arrays").textContent = frutas;
+           })
+
+           $btnOrdenarReverse.addEventListener("click", function(){
+               frutas.reverse();
+               document.querySelector(".arrays").textContent = frutas;
+           })
+           
+           $btnAdicionar.addEventListener("click", function(){
+               frutas.splice(1, 0, "Jabuticaba", "Pera", "Melancia", "pocan")
+               document.querySelector(".arrays").textContent = frutas;
+            })
+
+            $mostrar.addEventListener("click", function(){
+              
+               for(var i = 0; i < frutas.length; i++){
+                  
+                    document.querySelector(".indices").innerHTML += "Índice: " + i + " - Elemento: " + frutas[i] + "<br>";
+                    }
+                    return
+                }
+              
+            })
+
+        })()
+    </script>
+</body>
+</html>
